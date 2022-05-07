@@ -46,11 +46,6 @@ export class Tictactoe {
             if (clickedElement != this.boardElement) {
                 clickedElement.innerText = clickedElement.innerText == '' ? curPlayerLetter : clickedElement.innerText;
     
-                if (this.isGameDraw()) {
-                    this.winDisplayElement.innerText = "Draw!"
-                    return;
-                }
-
                 if (this.isPlayerVictory(curPlayerLetter, oppPlayerLetter)) {
                     this[`${curPlayerProp}`] += 1 
                     this.gameover = true
@@ -65,6 +60,12 @@ export class Tictactoe {
                         this.winDisplayElement.innerText = 'Player 2 Won!!'
                         this.player2ScoreEl.innerText = this.player2Score
                     }
+                    return;
+                }
+
+                if (this.isGameDraw()) {
+                    this.winDisplayElement.innerText = "Draw!"
+                    return;
                 }
 
                 this.currentTurn = !this.currentTurn
