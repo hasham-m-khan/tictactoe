@@ -85,19 +85,24 @@ export class Tictactoe {
             '..0.0.0..',
         ]
         let boardTiles = this.boardElement.childNodes;
-        let text = '';
 
-        boardTiles.forEach(tile => tile.innerText ? text += tile.innerText : text += '.')
-        text = text.split(`${textToReplace}`).join('.')
-        text = text.split(`${playerText}`).join('0')
-
+        // checking for match
         for (let pattern of winPatterns) {
+            let text = ''
+            boardTiles.forEach(tile => tile.innerText ? text += tile.innerText : text += '.')
+            text = text.split(`${textToReplace}`).join('.')
+            text = text.split(`${playerText}`).join('0')
+
+            console.log(pattern)
+        
             if (text === pattern) {
                 return true;
             }
         }
-        return false;
-    }
+
+            return false;
+        }
+
 
     isGameDraw () {
         let drawPattern = '000000000'
