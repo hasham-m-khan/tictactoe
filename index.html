@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Tic Tac Toe</title>
+</head>
+<body>
+    <div id="app">
+        <section id="baseElement">
+            <section id="game">
+                <!-- Tiles will be rendered here -->
+                <section id="board"></section>
+            </section>
+            <section id="ui">
+                <section id="turnDisplay">
+                    <h3>TURN</h3>
+                    <span>PLAYER 1</span>
+                </section>
+                <section id="score">
+                    <h3>SCORE</h3>
+                    <section id="player1Score" class="player-score">
+                        <h2>Player 1</h2>
+                        <span>0</span>
+                    </section>
+                    <section id="player2Score" class="player-score">
+                        <h2>Player 2</h2>
+                        <span>0</span>
+                    </section>
+                </section>
+                <section id="playerWin">
+                    <h2></h2>
+                </section>
+
+                <button id="reset">New Game</button>
+            </section>
+        </section>
+    </div>
+
+    <script src="script.js" type="module"></script>
+</body>
+</html>
